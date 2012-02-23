@@ -57,3 +57,7 @@ How to use
        }();
        Cache.expiry = 60*60*1000;
        getflickrbybadge.init();
+
+I used cache.js in my blog: thinkphp.ro/blog @section reading
+
+You can view in action: http://thinkphp.ro/apps/js-hacks/cache.js/
