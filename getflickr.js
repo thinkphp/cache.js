@@ -1,3 +1,4 @@
+var $ = function(id){return document.getElementById(id);}
 //show me love to the Module Pattern
 var getflickrbybadge = function() {
 
@@ -10,7 +11,9 @@ var getflickrbybadge = function() {
 
                var photos_cached = Cache.get('mybooksflickr');
 
-               document.getElementById('results').innerHTML = photos_cached;  
+               $('results').innerHTML = photos_cached;  
+ 
+               $('status').innerHTML = '(read from cache)';  
 
             } else {
 
@@ -20,9 +23,11 @@ var getflickrbybadge = function() {
 
       function seed(o) {
 
-           document.getElementById('results').innerHTML = o; 
+           document.getElementById('results').innerHTML = o
 
-           Cache.set('mybooksflickr',o); 
+           Cache.set('mybooksflickr',o)
+
+           $('status').innerHTML = 'read from api (fresh)'
       }
   
       function show(o) {
